@@ -1,0 +1,48 @@
+\documentclass[
+openany,
+zihao   = -4,
+fontset = none,
+punct   = kaiming,
+]{ctexbook}
+% 字体设置
+\usepackage{sourceserifpro,sourcesanspro,sourcecodepro}
+\defaultCJKfontfeatures{Mapping=fullwidth-stop}
+\IfFontExistsTF{Source Han Serif SC}{
+  \setCJKmainfont{Source Han Serif CN}[
+    UprightFont     = *-Regular,
+    BoldFont        = *-Bold,
+    ItalicFont      = 方正新楷体简体,
+    BoldItalicFont  = *-Bold
+  ]
+  \setCJKsansfont{Source Han Sans SC}[
+    UprightFont     = *-Regular,
+    BoldFont        = *-Bold,
+    BoldItalicFont  = *-Bold
+  ]
+  \setCJKmonofont{仿宋}[
+    AutoFakeBold    = true
+  ]
+}{
+  \ctexset{fontset=fandol}
+}
+% 基础设置
+\usepackage{graphicx}
+\usepackage[a4paper,width=45\ccwd,vmargin=2cm]{geometry}
+\usepackage[
+UseMSWordMultipleLineSpacing,
+MSWordLineSpacingMultiple = 1.5
+]{zhlineskip}
+% 按键显示
+\usepackage[os=win]{menukeys}
+\renewmenumacro{\keys}[+]{shadowedroundedkeys}
+
+\title{《计算机使用教程》（中老年人专用）}
+\author{死抠 \and Radiantzy}
+\begin{document}
+  \frontmatter
+  \maketitle
+  \input{chapter/preface.tex}
+  \tableofcontents
+  \mainmatter
+  \input{chapter/hardware.tex}
+\end{document}
