@@ -1,6 +1,6 @@
 \documentclass[
 openany,
-zihao   = -4,
+zihao   = 5,
 fontset = none,
 punct   = kaiming,
 ]{ctexbook}
@@ -25,12 +25,45 @@ punct   = kaiming,
 }{
   \ctexset{fontset=fandol}
 }
+% 章节设置
+\ctexset{
+  chapter = {
+    format      = \centering\zihao{-3}\bfseries,
+    beforeskip  = 0pt,
+    afterskip   = 0.5\baselineskip,
+    fixskip     = true,
+  },
+  section = {
+    format      = \raggedright\zihao{4}\bfseries,
+    beforeskip  = 0.5\baselineskip,
+    afterskip   = 0.5\baselineskip,
+    fixskip     = true,
+  },
+  subsection = {
+    format      = \raggedright\zihao{-4}\bfseries,
+    beforeskip  = 0.5\baselineskip,
+    afterskip   = 0.5\baselineskip,
+    fixskip     = true,
+  },
+  subsubsection = {
+    format      = \raggedright\zihao{5}\bfseries,
+    beforeskip  = 0.5\baselineskip,
+    afterskip   = 0.5\baselineskip,
+    fixskip     = true,
+  },
+}
+% 设置列表环境
+\usepackage{enumitem}
+\setlist[description,1]{parsep=0pt,itemsep=5pt}
 % 基础设置
+\usepackage{amsmath}
+\usepackage{unicode-math}
+\setmathfont{Latin Modern Math}
 \usepackage{graphicx}
-\usepackage[a4paper,width=45\ccwd,vmargin=2cm]{geometry}
+\usepackage[a4paper,width=48\ccwd,vmargin=2cm]{geometry}
 \usepackage[
 UseMSWordMultipleLineSpacing,
-MSWordLineSpacingMultiple = 1.5
+MSWordLineSpacingMultiple = 1.25
 ]{zhlineskip}
 \usepackage[hidelinks]{hyperref}
 % 按键显示
