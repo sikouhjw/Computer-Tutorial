@@ -32,12 +32,13 @@ punct   = kaiming,
 UseMSWordMultipleLineSpacing,
 MSWordLineSpacingMultiple = 1.5
 ]{zhlineskip}
+\usepackage[hidelinks]{hyperref}
 % 按键显示
 \usepackage[os=win]{menukeys}
-\renewmenumacro{\keys}[+]{shadowedroundedkeys}
+\newcommand{\seckeys}[1]{\texorpdfstring{\keys{#1}}{#1}}
 
 \title{《计算机使用教程》（中老年人专用）}
-\author{死抠 \and Radiantzy}
+\author{死抠 \and 陈天天}
 \begin{document}
   \frontmatter
   \maketitle
